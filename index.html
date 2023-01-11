@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="main.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header> 
@@ -24,17 +24,17 @@
     <section class="hero">
         <div class="features">
             <div>
-                <img src="web.png">
+                <img src="web.png" alt="web logo">
                 <h1>Learn Web Development</h1>
             </div>
 
             <div>
-                <img src="live.png">
+                <img src="live.png" alt="live logo">
                 <h1>Live sessions</h1>
             </div>
 
             <div>
-                <img src="discord.png">
+                <img src="discord.png" alt="discord logo">
                 <h1>Discord community</h1>
             </div>
         </div>
@@ -42,7 +42,7 @@
 
     <section class="main">
         <div class="description">
-            <img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+            <img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="someone struggling">
             <div>
                 <h2><strong>Learn Web Development</strong></h2>
                 <p>Learn about the three base languages used in web development - </p>
@@ -54,7 +54,7 @@
                     <p> - and how to use the three of them together to create an interactive web application.</p>
     
                 <h2><i>Live sessions</i></h2>
-                <p>Regular live sessions where you will be guided through the creation of your first web projects.</p>
+                <p>Regular live sessions <br> where you will be guided through the creation of your first web projects.</p>
     
                 <h2>Discord community</h2>
                 <ol>
@@ -87,8 +87,29 @@
         </div>
     </section>
 
-    <footer>
-        <a href="https://www.flaticon.com/free-icons/live" title="live icons">Live icons created by Freepik - Flaticon</a>
-    </footer>
+    <div class="forum">
+    <form>
+        <label for="post-author">Author</label>
+        <br>
+        <input type="text" id="post-author">
+        <br><br>
+        <label for="post-text">Text</label>
+        <br>
+        <textarea id="post-text"></textarea>
+        <br><br>
+        <button type="button" onclick="newPost()">Submit</button>
+    </form>
+
+    <div class="post">
+        <span>RainyBoi</span>
+        <p>Testing</p>
+    </div>
+</div>
+
+
+
+<footer>
+    <a href="https://www.flaticon.com/free-icons/live" title="live icons">Live icons created by Freepik - Flaticon</a>
+</footer>
 </body>
 </html>
