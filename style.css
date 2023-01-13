@@ -220,6 +220,23 @@ button {
     font-size: 14px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .signup, .main{
     color: darkblue;
+}
+
+#visibilityButton{
+    margin-left: 45%;
+    margin-top: 5%;
+    height: max-content;
+}
+
+#pinkButton{
+    height: max-content;
+    width: min-content;
+    background-color: #FF44CC;
+    color: black;
 }

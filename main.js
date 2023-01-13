@@ -29,6 +29,9 @@ const form  = document.getElementById('signup-form');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if(validate()) {
+        form.submit();
+    }
     ClearFields();
 });
 
@@ -44,21 +47,37 @@ function validate(){
 
     if(name == "" || !regName.test(name)){
         alert("Please enter your name properly.");
-        name.focus();
         return false;
     }
 
     if(option == ""){
         alert("Please choose your programming experience");
-        option.focus();
         return false;
     }
 
-    if (email == "" || !regEmail.test(email)) {
+    if (email == "" || !regEmail) {
         alert("Please enter a valid e-mail address.");
-        email.focus();
         return false;
     }
 
     return true;
 }
+
+function showForum(){
+    var forum = document.getElementById("dumb");
+    var button = document.getElementById("visibilityButton");
+
+    if(forum.style.visibility == "visible"){
+        forum.style.visibility = "hidden";
+        button.value = "Hide forum";
+    } else {
+        forum.style.visibility = "visible";
+        button.value = "Show forum";
+    }
+}
+
+$(document).ready(function(){
+    $("#pinkButton").click(function(){
+        $("*").css('color','#FF44CC');
+    });
+});

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <header> 
@@ -82,29 +83,32 @@
                 <label for="signup-email">Email</label><br> 
                 <input type="email" id="signup-email" name="Email"><br><br>
 
-                <input type="submit" onclick="validate()" value="Sign up">
+                <input type="submit" value="Sign up">
             </form>
         </div>
     </section>
 
-    <div class="forum">
-    <form>
-        <label for="post-author">Author</label>
-        <br>
-        <input type="text" id="post-author">
-        <br><br>
-        <label for="post-text">Text</label>
-        <br>
-        <textarea id="post-text"></textarea>
-        <br><br>
-        <button type="button" onclick="newPost()">Submit</button>
-    </form>
+    <button id="visibilityButton" type="button" onclick="showForum()">Hide forum</button>
+    <button id="pinkButton" type="button">Everything Pink!</button>
 
-    <div class="post">
-        <span>Rainy</span>
-        <p>Testing</p>
+    <div class="forum" id="dumb">
+        <form>
+            <label for="post-author">Author</label>
+            <br>
+            <input type="text" id="post-author">
+            <br><br>
+            <label for="post-text">Text</label>
+            <br>
+            <textarea id="post-text"></textarea>
+            <br><br>
+            <button type="button" onclick="newPost()">Submit</button>
+        </form>
+
+        <div class="post">
+            <span>Rainy</span>
+            <p>Testing</p>
+        </div>
     </div>
-</div>
 
 
 
